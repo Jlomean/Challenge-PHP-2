@@ -42,7 +42,7 @@
 		}
 
 		else {
-			echo "Ceci n'est pas une chaîne d'entiers positifs."
+			echo "Ceci n'est pas une chaîne d'entiers positifs.";
 		}
 
 	}
