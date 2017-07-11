@@ -83,7 +83,6 @@
 	function forkGame($try) {
 		
 		$guessIt = rand(1, 100);
-		$tryArray = [];
 		$try = '';
 
 		$i=0;
