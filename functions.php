@@ -19,8 +19,8 @@
 			foreach($numbers as $number ){
 				
 				if (fmod(sqrt($number), 1) == 0){
-					$squareOrNot1='<bold>';
-					$squareOrNot2='</bold>';
+					$squareOrNot1='<strong>';
+					$squareOrNot2='</strong>';
 				}
 				else {
 					$squareOrNot1='';
@@ -29,12 +29,12 @@
 				
 				echo "<li ";
 				if (($number % 2) == 0){
-					echo "style='color:blue'>".$squareOrNot1.$number.$squareOrNot2;
+					echo "style='color:blue'>";
 				}
 				else{
-					echo "style='color:orange'>".$squareOrNot1.$number.$squareOrNot2;
+					echo "style='color:orange'>";
 				}
-				echo "</li>"."\n";
+				echo $squareOrNot1.$number.$squareOrNot2."</li>"."\n";
 			}
 			
 			echo "</ol>";
@@ -51,16 +51,14 @@
 
 	function bigGap (array $numbers2) {
 		
-		$numbers2 = [];
 		$firstNumber=0;
 		$secondNumber=0;
 		$gap=0;
 		
-		echo "Les nombres comparés sont :";
+		echo nl2br("Les nombres comparés sont :"."\n\n");
 		foreach ($numbers2 as $number2){
-			echo "- ".$number2."\n";
+			echo nl2br("- ".$number2."\n");
 		}
-		echo ".";
 		
 			for ($i=0; $i<10; $i++){
 				
@@ -75,7 +73,7 @@
 				
 			}
 		
-		echo "\n\n"."Le plus grand écart trouvé est de ".$gap.".";
+		echo nl2br("\n\n"."Le plus grand écart trouvé est de ".$gap.".");
 	}
 
 // Fonction pour l'exercice 3 :
@@ -89,12 +87,12 @@
 
 		while ($i<8) {
 			if ($try < $guessIt) {
-				echo "Nombre donné trop petit."."\n";
+				echo nl2br("Nombre donné trop petit."."\n");
 				$i++;
 			}
 			
 			elseif ($try > $guessIt) {
-				echo "Nombre donné trop grand."."\n";
+				echo nl2br("Nombre donné trop grand."."\n");
 				$i++;
 			}
 			
@@ -104,12 +102,12 @@
 					echo "Bravo ! Vous avez trouvé du 1er coup !";
 				}
 				else {
-					echo "Bravo ! Vous avez trouvé en ".$i." essais !";
+					echo "Bravo ! Vous avez trouvé en ".$i." essais.";
 				}
 				break;
 			}
 			if ($i==8) {
-				echo "Désolée, le nombre était ".$guessIt.".";
+				echo nl2br("\n"."Désolée, le nombre était ".$guessIt.".");
 			}
 		}
 		
